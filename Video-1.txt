@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 a) Ya vi el vídeo 1 (https://youtu.be/ANF1X42_ae4) 
+=======
+a) Ya vi el vídeo 1 (https://youtu.be/ANF1X42_ae4)
+>>>>>>> 3db63bb84da2636859e64db4bcdb62d858c182be

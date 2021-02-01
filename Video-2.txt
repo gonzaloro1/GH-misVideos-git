@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 b) Video 2 (https://youtu.be/qk-GWtcdQek)  
+=======
+b) Video 2
+>>>>>>> 3db63bb84da2636859e64db4bcdb62d858c182be
    
 git init
 git add (se añade de lo que se quiere hacer el seguimiento)

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 c) Video 3 (https://youtu.be/0UlqvTJzOL4) 
+=======
+
+c) Video 3
+>>>>>>> 3db63bb84da2636859e64db4bcdb62d858c182be
    
 git status -s
 git add .
