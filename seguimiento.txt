@@ -36,3 +36,37 @@ git commit --amend
     git remote .....  
     (esta línea se pone en la consola local, y se sube a github)
 
+
+d) Video 4
+   
+Editar en GitHub
+(para sincronizar con el local)
+
+commit changes (guarda en el remoto)
+
+Para traer a local - pull
+(para bajar)
+$ git pull (viene lo de remoto a local)
+  (git fech)
+   
+Grabar una primera versión del proyecto (V1.0)
+   Con las tags se especifican versiones
+En el repositorio -> tags (agregar tags)   
+
+En local
+$git tag 15-09-20V1 -m "Versión 1 del proyecto"
+$git log --oneline (aparece el tag)
+
+Para subir el tag - push
+$git push --tags
+
+En la carpeta del proyecto (cerrar todo)
+Simular un desastre (borrar el proyecto en local)
+Ahora vamos al remoto (GitHub) y en code cogemos la url
+Ahora en consola local:
+$git clone "url"  (en este momento ya tenemos el proyecto en local)
+
+
+
+To push the current branch and set the remote as upstream, use
+$ git push --set-upstream origin master
