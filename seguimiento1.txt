@@ -1,0 +1,38 @@
+a) Ya vi el vídeo 1 (https://youtu.be/ANF1X42_ae4)
+b) Video 2
+   
+git init
+git add (se añade de lo que se quiere hacer el seguimiento)
+git commit
+git status -s
+git add <fichero>
+git commit -m "<descripción>"
+git config --global user.username
+git log --oneline
+git log --reverse	
+git reset --hard <código de instantánea>
+
+c) Video 3
+   
+git status -s
+git add .
+git log --oneline
+git add .
+   +
+git commit 
+   = git commit -am "<descripción>"
+(para cambiar la descripción de de commit)
+git commit --amend
+(para abrir el vim)
+    :i
+    esc
+    :wq
+(como subir a github)
+ - crear repositorio en github
+     - dar nombre, descripción
+     - public
+ - Quick setup (vamos a subir un proyecto existente)
+ - Para subir la línea:
+    git remote .....  
+    (esta línea se pone en la consola local, y se sube a github)
+
