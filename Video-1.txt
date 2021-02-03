@@ -1,5 +1,35 @@
-<<<<<<< HEAD
-a) Ya vi el vídeo 1 (https://youtu.be/ANF1X42_ae4) 
-=======
-a) Ya vi el vídeo 1 (https://youtu.be/ANF1X42_ae4)
->>>>>>> 3db63bb84da2636859e64db4bcdb62d858c182be
+
+A)  Video 1  https://youtu.be/ANF1X42_ae4 
+=========================================
+
+1. Git salva instantánea de nuestros ficheros (código + descripción)
+      Instantánea-0
+      Instantánea-1
+      ....
+      Instantánea-n
+   Se puede volver a una instantánea anterior
+   
+2. Una aplicación está formada por muchos archivos
+   (por ejemplo, si trabajamos con un FrameWord)
+   Necesitamos una instantánea fija de muchos archivos
+   (Git toma una instantánea de todos los archivos)
+   
+3. Git permite crear ramas
+   Un programa o aplicación se puede dividir en varias ramas
+   o flujos de trabajo.
+   En una aplicación pueden trabajar varios programadores.
+   Así cada programador se centra en uno de los flujos de trabajo
+   o ramas.
+   Cada programador hace instantáneas de sus ramas
+   
+4. Git después puede unir o fusionar las diferentes ramas de una aplicación
+   en una única rama.
+	  
+5. Git, al fusionar las diferentes ramas, puede detectar conflictos
+   (ejemplo: dos programadores hacen modificaciones en una misma parte
+    de la aplicación. Git detecta este conflicto y lo intenta solucionar)
+
+6. Git aumenta su potencia al unirse con GitHub
+   Se descarga Git y se instala. Lo importante es la Consola de Git
+   Visual Studio Code es un IDE que está preparado para trabajar con Git
+   Pildoras Informáticas lugar donde están estos vídeos sobre Git   
