@@ -15,21 +15,24 @@ A)  Video 1  https://youtu.be/ANF1X42_ae4
    (Git toma una instantánea de todos los archivos)
    
 3. Git permite crear ramas
-   Un programa o aplicación se puede dividir en varias ramas
-   o flujos de trabajo.
+   Un programa o aplicación se puede dividir en varias ramas o flujos de trabajo.
    En una aplicación pueden trabajar varios programadores.
-   Así cada programador se centra en uno de los flujos de trabajo
-   o ramas.
-   Cada programador hace instantáneas de sus ramas
+   Así cada programador se centra en uno de los flujos de trabajo o ramas.
+   Cada programador hace instantáneas de sus ramas.
    
-4. Git después puede unir o fusionar las diferentes ramas de una aplicación
-   en una única rama.
+4. Git después puede unir o fusionar las diferentes ramas de una aplicación en una única rama.
 	  
 5. Git, al fusionar las diferentes ramas, puede detectar conflictos
-   (ejemplo: dos programadores hacen modificaciones en una misma parte
-    de la aplicación. Git detecta este conflicto y lo intenta solucionar)
+   (ejemplo: dos programadores hacen modificaciones en una misma parte de la aplicación. Git detecta este conflicto y lo intenta solucionar)
 
-6. Git aumenta su potencia al unirse con GitHub
-   Se descarga Git y se instala. Lo importante es la Consola de Git
-   Visual Studio Code es un IDE que está preparado para trabajar con Git
-   Pildoras Informáticas lugar donde están estos vídeos sobre Git   
+6. Git aumenta su potencia al unirse con GitHub.
+   Se descarga Git y se instala. Lo importante es la Consola de Git.
+   Visual Studio Code es un IDE que está preparado para trabajar con Git.
+   Pildoras Informáticas lugar donde están estos vídeos sobre Git.
+
+=========================================
+$ git status -s
+$ git add .
+$ git log --oneline
+$ git commit -m "Mejorado Video-1.txt"
+$ git push
