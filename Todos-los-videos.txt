@@ -15,15 +15,18 @@ A)  Video 1  https://youtu.be/ANF1X42_ae4
    (Git toma una instantánea de todos los archivos)
    
 3. Git permite crear ramas
-   Un programa o aplicación se puede dividir en varias ramas o flujos de trabajo.
+   Un programa o aplicación se puede dividir en varias ramas o flujos de
+   trabajo.
    En una aplicación pueden trabajar varios programadores.
    Así cada programador se centra en uno de los flujos de trabajo o ramas.
    Cada programador hace instantáneas de sus ramas.
    
-4. Git después puede unir o fusionar las diferentes ramas de una aplicación en una única rama.
+4. Git después puede unir o fusionar las diferentes ramas de una aplicación 
+   en una única rama.
 	  
 5. Git, al fusionar las diferentes ramas, puede detectar conflictos
-   (ejemplo: dos programadores hacen modificaciones en una misma parte de la aplicación. Git detecta este conflicto y lo intenta solucionar)
+   (ejemplo: dos programadores hacen modificaciones en una misma parte de la
+    aplicación. Git detecta este conflicto y lo intenta solucionar)
 
 6. Git aumenta su potencia al unirse con GitHub.
    Se descarga Git y se instala. Lo importante es la Consola de Git.
@@ -44,56 +47,65 @@ B)  Video 2  https://youtu.be/qk-GWtcdQek
    
 1. Se verán estos aspectos:
       Crear repositorio
-	  Agregar al repositorio
-	  Respaldar en el repositorio
-	  
+      Agregar al repositorio
+      Respaldar en el repositorio
+      
 2. Tenemos tres zonas:
       - Directorio de trabajo
-	    (carpeta donde están nuestros ficheros)
-	  - Área de ensayo
-	    (Staging area)
-	  - Repositorio local
-	    (lugar donde se guardan las instantáneas)
+        (carpeta donde están nuestros ficheros)
+      - Área de ensayo
+        (Staging area)
+      - Repositorio local
+        (lugar donde se guardan las instantáneas)
 		
 3. Una primera aproximación a los comandos y su significado
-      git init
-         Se ejecuta sólo una vez, al comienzo, y así se crea el repositorio local, en donde vamos a hacer un seguimiento de nuestros ficheros.
-	  git add
-         Con esta orden se llevan los archivos del directorio de trabajo al área de ensayo
-      git commit
-         Con esta orden se llevan loa archivos del área de ensayo al repositorio local
+      $ git init
+         Se ejecuta sólo una vez, al comienzo, y así se crea el repositorio
+        local, en donde vamos a hacer un seguimiento de nuestros ficheros.
+      $ git add
+         Con esta orden se llevan los archivos del directorio de trabajo 
+         al área de ensayo
+      $git commit
+         Con esta orden se llevan loa archivos del área de ensayo 
+         al repositorio local
 
-4. Creamos una carpeta donde pondremos nuestros ficheros y será el Directorio de trabajo.
-   Ahora, en esta carpeta, botón derecho escoger "Git Bash Here" y se abre la consola de Git en esta carpeta.
+4. Creamos una carpeta donde pondremos nuestros ficheros y será 
+   el Directorio de trabajo.
+   Ahora, en esta carpeta, botón derecho escoger "Git Bash Here" y se abre 
+   la consola de Git en esta carpeta.
    Escribimos "git init" y se crea el Repositorio local en esta carpeta.
    (viendo ocultos aparece .git)
    
 5. Indicar lo que va a ser seguido por Git
       $ git status -s 
-      (da el listado de todo lo que hay en el directorio de trabajo; los ficheros, con ?? delante, es que no se están siguiendo)
+      (da el listado de todo lo que hay en el directorio de trabajo; 
+       los ficheros, con ?? delante, es que no se están siguiendo)
    Si queremos seguir sólo un fichero:
       $ git add <fichero>  (git add caso.txt)
-	  $ git status -s
-	  (muesta el archivo, con A delante; es que está agregado al área de ensayo, se le está haciendo un seguimiento)
-	   
+      $ git status -s
+      (muesta el archivo, con A delante; es que está agregado al área de ensayo,
+       se le está haciendo un seguimiento)
+       
 6. Para hacer una instantánea
       $ git commit -m "<descripción>"
    Si ahora hacemos
       $ git status -s 
-	  (No muestra lo que está respaldado, lo que está en el repositorio.
-	   Sí muestra lo que se está siguiendo, lo que está en el área de ensayo)
+      (No muestra lo que está respaldado, lo que está en el repositorio.
+       Sí muestra lo que se está siguiendo, lo que está en el área de ensayo)
    Si ahora hacemos una modificación en un fichero
-      * Hasta que no hagamos "git add <fichero>", no se agregará al área de ensayo
+      Hasta que no hagamos "git add <fichero>", no se agregará 
+      al área de ensayo
    
 7. Para listar todas las instantáneas que están en el repositorio local
-      $ git log --onelina
-	  (listará tantas instantáneas como commit se hayan realizado)
-	  
+      $ git log --oneline
+      (listará tantas instantáneas como commit se hayan realizado)
+      
 8. Para restaurar una instantánea concreta
-      $ git reser --hard <código de la instantánea>
+      $ git reset --hard <código de la instantánea>
    Si ahora hacemos
       $ git log --oneline
-	  (muestra las instantáneas actuales. Si se restaura a una instantánea concreta, las instantáneas posteriores se pierden)
+      (muestra las instantáneas actuales. Si se restaura a 
+       una instantánea concreta, las instantáneas posteriores se pierden)
 	  
 -----------------------------------------
 git init
