@@ -60,7 +60,7 @@ B)  Video 2  https://youtu.be/qk-GWtcdQek
 		
 3. Una primera aproximación a los comandos y su significado
       $ git init
-         Se ejecuta sólo una vez, al comienzo, y así se crea el repositorio
+        Se ejecuta sólo una vez, al comienzo, y así se crea el repositorio
         local, en donde vamos a hacer un seguimiento de nuestros ficheros.
       $ git add
          Con esta orden se llevan los archivos del directorio de trabajo 
@@ -124,7 +124,38 @@ git reset --hard <código de instantánea>
 =========================================
 C)  Video 3  https://youtu.be/0UlqvTJzOL4 
 =========================================
-   
+
+1. Veremos 
+      - cómo subir un repositorio local a GitHub y
+      - cómo hacer un seguimiento a todos los ficheros
+      $ git add . 
+        (agrega al área de ensayo todos los ficheros)
+      $ git log --oneline
+        (veremos todos los commit)
+		
+2. Cómo hacer dos comandos en uno
+      $ git add .
+      $ git commit -m "<descripción>"
+        (estos dos comandos se pueden hacer en uno, ver a continuación:)
+      $ git commit -am  "<descripción>"
+	  
+3. Para corregir una descripción de un commit
+      - abrir editor vim de esta forma:
+      $ git commit ..amend
+
+4. Cómo subir a GitHub
+      - Primero registrarse
+      - En el segundo bloque (or push ..)
+            1ª línea es para subir el repositorio local a GitHub
+            3ª línea es para nuevas subidas a GitHub
+      - Ahora se puede ver el repositorio subido
+        (informa de los commit)
+        En un commit, en el botón <>, se ve el estado, en esa instantánea,
+        de los fichero
+      - En GitHub podemos ver el estado de los ficheros, en los diferentes
+        commit (aparece la descripción de los commit)
+
+-----------------------------------------
 git status -s
 git add .
 git log --oneline
@@ -151,7 +182,53 @@ git commit --amend
 =========================================
 D)  Video 4  https://youtu.be/axXlYdyDD3I
 =========================================
-   
+
+1. Veremos 
+      - cómo editar archivos desde GitHub (en remoto) y después
+        trasladarlos a local, sincronizarlos
+      - cómo crear tags y para qué sirven
+      - cómo clonar un repositorio, que está en remoto,
+        a local (traerlo a local)
+		
+2. Modificamos en remoto un archivo
+      - lo editamos para realizar los cambios que queramos
+        y pulsamos el botón "commit changes"
+        (en este momento se guardan los cambio en remoto)
+		
+3. Cómo traer lo de remoto a local
+      - Recordar que para subir de local a remoto se utilizaba:
+      $ git push
+      - Pues para bajar de remoto a local se utiliza:
+      $ git pull
+      - git fech es muy parecido a git pull (pero se verá más adelante)
+	  
+4. Ahora queremos guardar una primera versión de nuestro proyecto (repositorio)
+   (funciona bien, nos gusta como está)
+      - Cómo hacemos esto: con tags podemos especificar versiones
+        de nuestro proyecto
+      - En GitHub, si vamos a nuestro proyecto, tenemos 0 tags
+      - En local, en la consola, hacemos
+      $ git log --oneline (y no vemos ningún tag)
+        Ahora escribimos esto:
+      $ git tag 11-02-21v1 -m "Versión 1 del proyecto"
+        Si ahora hacemos
+      $ git log --oneline (ya nos indica que creamos una tag)
+        Para subir este tag ponemos
+      $ git push --tags
+      - Ahora en GitHub, actualizando, ya está la tag y nos ofrece la opción
+        de descargar esta versión en un zip
+        En el futuro, cuando se creen más tags, tendremos las diferentes
+        versiones de nuestro proyecto.
+5. Ahora simulamos un desastre 
+   (eliminamos en local la carpeta de nuestro proyecto)
+      - cómo recuperar nuestro proyecto?
+      - vamos a GitHub y en el botón Code vemos que podemos clonar
+        el repositorio (nos muestra la URL)
+      - En la consola, en local, nos ponemos en la carpeta donde 
+        queremos clonar el proyecto y escribimos
+      $ git clone <URL>		
+
+-----------------------------------------
 Editar en GitHub
 (para sincronizar con el local)
 
@@ -183,3 +260,7 @@ $git clone "url"  (en este momento ya tenemos el proyecto en local)
 
 To push the current branch and set the remote as upstream, use
 $ git push --set-upstream origin master
+
+=========================================
+E)  Video 5  https://youtu.be/q9LJIHDgJtE
+=========================================
