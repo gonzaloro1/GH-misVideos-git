@@ -2,7 +2,7 @@
 A)  Video 1  https://youtu.be/ANF1X42_ae4 
 =========================================
 
-1. Git salva instantánea de nuestros ficheros (código + descripción)
+1. Git salva instantáneas de nuestros ficheros (código + descripción)
       Instantánea-0
       Instantánea-1
       ....
@@ -10,7 +10,7 @@ A)  Video 1  https://youtu.be/ANF1X42_ae4
    Se puede volver a una instantánea anterior
    
 2. Una aplicación está formada por muchos archivos
-   (por ejemplo, si trabajamos con un FrameWord)
+   (por ejemplo, si trabajamos con un FrameWork)
    Necesitamos una instantánea fija de muchos archivos
    (Git toma una instantánea de todos los archivos)
    
@@ -32,13 +32,6 @@ A)  Video 1  https://youtu.be/ANF1X42_ae4
    Se descarga Git y se instala. Lo importante es la Consola de Git.
    Visual Studio Code es un IDE que está preparado para trabajar con Git.
    Pildoras Informáticas lugar donde están estos vídeos sobre Git.
-
------------------------------------------
-$ git status -s
-$ git add .
-$ git log --oneline
-$ git commit -m "Mejorado Video-1.txt"
-$ git push
 
 
 =========================================
@@ -66,7 +59,7 @@ B)  Video 2  https://youtu.be/qk-GWtcdQek
          Con esta orden se llevan los archivos del directorio de trabajo 
          al área de ensayo
       $git commit
-         Con esta orden se llevan loa archivos del área de ensayo 
+         Con esta orden se llevan los archivos del área de ensayo 
          al repositorio local
 
 4. Creamos una carpeta donde pondremos nuestros ficheros y será 
@@ -108,18 +101,8 @@ B)  Video 2  https://youtu.be/qk-GWtcdQek
        una instantánea concreta, las instantáneas posteriores se pierden)
 	  
 -----------------------------------------
-git init
-git add (se añade lo que se quiere hacer el seguimiento)
-git commit
-git status -s
-git add <fichero>
-git commit -m "<descripción>"
 git config --global user.username "<nombre>"
 git config --global user.email "<email>"
-git log --oneline
-git log --reverse	
-git reset --hard <código de instantánea>
-
 
 =========================================
 C)  Video 3  https://youtu.be/0UlqvTJzOL4 
@@ -141,7 +124,7 @@ C)  Video 3  https://youtu.be/0UlqvTJzOL4
 	  
 3. Para corregir una descripción de un commit
       - abrir editor vim de esta forma:
-      $ git commit ..amend
+      $ git commit --amend
 
 4. Cómo subir a GitHub
       - Primero registrarse
@@ -154,29 +137,6 @@ C)  Video 3  https://youtu.be/0UlqvTJzOL4
         de los fichero
       - En GitHub podemos ver el estado de los ficheros, en los diferentes
         commit (aparece la descripción de los commit)
-
------------------------------------------
-git status -s
-git add .
-git log --oneline
-git add .
-   +
-git commit 
-   = git commit -am "<descripción>"
-(para cambiar la descripción de de commit)
-git commit --amend
-(para abrir el vim)
-    :i
-    esc
-    :wq
-(como subir a github)
- - crear repositorio en github
-     - dar nombre, descripción
-     - public
- - Quick setup (vamos a subir un proyecto existente)
- - Para subir la línea:
-    git remote .....  
-    (esta línea se pone en la consola local, y se sube a github)
 
 
 =========================================
@@ -228,39 +188,102 @@ D)  Video 4  https://youtu.be/axXlYdyDD3I
         queremos clonar el proyecto y escribimos
       $ git clone <URL>		
 
------------------------------------------
-Editar en GitHub
-(para sincronizar con el local)
-
-commit changes (guarda en el remoto)
-
-Para traer a local - pull
-(para bajar)
-$ git pull (viene lo de remoto a local)
-  (git fech)
-   
-Grabar una primera versión del proyecto (V1.0)
-   Con las tags se especifican versiones
-En el repositorio -> tags (agregar tags)   
-
-En local
-$git tag 15-09-20V1 -m "Versión 1 del proyecto"
-$git log --oneline (aparece el tag)
-
-Para subir el tag - push
-$git push --tags
-
-En la carpeta del proyecto (cerrar todo)
-Simular un desastre (borrar el proyecto en local)
-Ahora vamos al remoto (GitHub) y en code cogemos la url
-Ahora en consola local:
-$git clone "url"  (en este momento ya tenemos el proyecto en local)
-
-
-
-To push the current branch and set the remote as upstream, use
-$ git push --set-upstream origin master
 
 =========================================
 E)  Video 5  https://youtu.be/q9LJIHDgJtE
 =========================================
+
+1. Rama o branch (es una línea de tiempo)
+      - A esta línea de tiempo se le llama master
+      - Se pueden crear vias líneas de tiempo paralelas
+      - Así tenemos la línea de tiempo master
+        (se puede volver a commit anteriores en la rama master)
+      - Se puede añadir una línea de tiempo adicional para
+        hacer pruebas y ver cómo quedaría el proyecto
+      - En proyectos en los que hay varios programadores
+        se pueden crear varias líneas de tiempo.
+        (en una de esas ramas se trabajaría sobre unos ficheros
+         y en otra se trabajaría sobre otros ficheros)
+      - Se puede crear una rama adicional. Así estaría la master
+        y además la rama adicional. Y se puede trabajar a la vez
+        en las dos ramas.
+        (esta rama adicional sería, por ejemplo, para pruebas)
+		
+2. Fusión de ramas (merge)
+      - Se puede trabajar con muchas ramas a la vez.
+      - Depués se pueden unir las ramas adicionales en la
+        rama master, es una fusión.
+      - Advertencia: se puede modificar el mismo fichero en dos ramas
+        diferentes 
+        (aquí surge un conflicto: se está modificando lo mismo en 
+         el mismo fichero en dos ramas diferentes).
+		 
+3. Caso práctico
+      - Pasos: a)creamos una rama adicional, b)se harán cambios en las dos
+        ramas y después c)se fusionarán.
+      $ git log --oneline (se ven los commit)
+      - En el último commit aparecee la palabra master.
+        (estamos en la rama master, no hay más ramas)
+      - Supongamos que queremos modificar ciertos archivos
+        para ver cómo quedaría el proyecto o bien deseamos
+        hacer pruebas.
+        (en este caso lo que se debería hacer es crear
+         una nueva rama adicional, para realizar los cambios
+         que deseamos)
+4.- Crear rama adicional
+      $ git branch <nombre> (ej: git branch adicional)
+      - Hacemos un "git log --oneline" y aparecerán 2 ramas
+      $ git branch 
+        (nos muestra las ramas existentes y en que rama estamos)
+      - Las modificaciones que hagamos serán en la rama donde
+        estemos.
+      - Para movernos a una rama:
+      $ git checkout <nombre-rama>
+        (ej: git checkout adicional)
+      $ git branch
+        (ahora nos indica en la rama donde estamos)
+        Hacemos cambios y ya son en la nueva rama donde
+        estamos (por ejemplo, en la rama adicional)
+      - Seguidamente agregamos las modificaciones al
+        área de ensayo y hacemos instantánea:
+      $ git add .
+      $ git commit -m "<descripción>"
+      $ git log --oneline
+        (se ve el commit en la nueva rama)
+      - Al movernos a la rama master, todo lo hecho en la
+        otra rama (la rama adicional) no estará.
+      $ git checkout master
+        (el proyecto vuelve a estar como lo teníamos en la 
+         rama master)
+      - Si nos movemos de nuevo a la rama adicional, 
+        el proyecto estará como lo dejamos, cuando la
+        abandonamos.
+      - Es una forma de trabajar con dos copias del mismo
+        proyecto e ir de una a otra.
+      - Nos movemos de nuevo a la rama master y modificamos
+        un fichero que ya habíamos modificado en la rama
+        adicional.
+      - Seguidamente agregamos las modificaciones al
+        área de ensayo y hacemos instantánea:
+      $ git add .
+      $ git commit -m "<descripción>"
+      $ git log --oneline
+        (ahora no se ve el commit hecho en la rama 
+         adicional)
+      - Si nos movemos a la rama adicional, vemos
+        el commit hecho en esta rama, pero no el hecho en
+        la rama master.
+        (es como si fueran dos proyectos diferentes)
+
+5. ¿Cómo fusionamos lo hecho en ambas ramas?
+      - Para hace un merge hay que moverse obligatoriamente
+        a la rama master.
+        (el merge se debe hacer desde la rama master)
+      $ git merge <nombre-rama>
+        (nos informa de que hay conflictos y que no 
+         se hizo el merge)
+      - Veremos en otro vídeo cómo resolver este conflicto
+		
+	 
+
+
