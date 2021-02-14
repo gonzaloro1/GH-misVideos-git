@@ -179,6 +179,7 @@ D)  Video 4  https://youtu.be/axXlYdyDD3I
         de descargar esta versión en un zip
         En el futuro, cuando se creen más tags, tendremos las diferentes
         versiones de nuestro proyecto.
+
 5. Ahora simulamos un desastre 
    (eliminamos en local la carpeta de nuestro proyecto)
       - cómo recuperar nuestro proyecto?
@@ -285,5 +286,4 @@ E)  Video 5  https://youtu.be/q9LJIHDgJtE
       - Veremos en otro vídeo cómo resolver este conflicto
 		
 	 
-
 
